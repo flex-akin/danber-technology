@@ -36,8 +36,6 @@
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
-- [Project Structure](#project-structure)
-- [Scripts](#scripts)
 - [Endpoints](#endpoints)
 
 ## Prerequisites
@@ -53,16 +51,25 @@
    git clone https://github.com/yourusername/damber-technology.git
    cd damber-technology
    ```
-2. **Installing APplication**
+2. **Installing Application**
 
 ```
 npm install
 ```
+## Running the Application
 
-3. **Environmental Variable**
+1. **Environmental Variable**
+Add the environment variables to the root of the application, the environmental variables are stored in a .env file attached with this mail
 
-The environment variables are attached in a file sent with this mail
+2.  **Running the application** 
+```bash
+#For dev mode
+npm run start:dev
+#for production mode
+npm start
+   ```
 
-4. **API Documentation**
-
-[text](https://documenter.getpostman.com/view/13823032/2sA3kdBdR5)
+## Endpoints
+Endpoint can be found in the postman documentation bellow
+1. **API Documentation**
+https://documenter.getpostman.com/view/13823032/2sA3kdBdR5
