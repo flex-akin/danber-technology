@@ -25,3 +25,18 @@ export const createUser = catchAsync(async (req: Request<{}, {}, ICreateUserDto>
     })
 })
 
+export const getAllUsers = 
+async (req: Request, res: Response<MessageInterface>, next: NextFunction) => {
+    try {
+        const user = await UserModel.find()
+        if (!user) return next(createHttpError(404, "No task found"));
+        res.status(200).send({
+            message: "data fetched successfully",
+            status: true, 
+            data: user          
+        });
+    } catch (error) {
+       return next(createHttpError.InternalServerError("internal server error"))
+    }
+}
+
